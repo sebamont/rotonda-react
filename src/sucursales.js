@@ -205,7 +205,7 @@ export const sucursalData = {
                 "horario" : "Lunes a Sábados de 08:30 a 13:00 y de 17:30 a 21:30hs",
                 "telefono" : "3874285655",
                 "aclaracionTel" : "*Sucursal sin número propio, teléfono de casa central.",
-                "mapSrc" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.4331814367924!2d-65.75991778437788!3d-28.46649836664145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94242f48eef5e263%3A0x4eb777234db07e09!2sLa%20Rontonda%20L%C3%A1cteos!5e0!3m2!1ses!2sar!4v1606588908836!5m2!1ses!2sar",
+                "mapSrc" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1767.144551077301!2d-67.02909230172737!3d-27.6465258168884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942092ef48b443cf%3A0x2f088f6f50c419a0!2sAv.%20Calchaqu%C3%AD%20600%2C%20Bel%C3%A9n%2C%20Catamarca!5e0!3m2!1ses!2sar!4v1606859999601!5m2!1ses!2sar",
             },
         }
     }

@@ -116,6 +116,11 @@ transform-origin: right;
     color: #191970;
 }
 
+@media (min-width: 340px) and (max-width: 991px) {
+    .navbar .navbar-brand::after {
+        content: " MAYORISTA";
+    }
+  }
 
 #navbar-toggler {
     color: #191970;
@@ -231,11 +236,13 @@ transform-origin: right;
     
 }
 
-#sucursales .nav-pills .nav-link:hover {
+#sucursales .nav-pills .nav-link:hover, #sucursales .nav-pills .dropdown-toggle:focus, #sucursales .nav-pills .dropdown-item:hover {
     background-color: #0b1327;
     border-bottom: 2px solid #0b1327;
     color:whitesmoke;
 }
+
+
 
 #sucursales .nav-pills .active:hover {
     color: #191970;
