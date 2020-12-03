@@ -116,7 +116,7 @@ transform-origin: right;
     color: #191970;
 }
 
-@media (min-width: 340px) and (max-width: 991px) {
+@media (min-width: 341px) and (max-width: 991px) {
     .navbar .navbar-brand::after {
         content: " MAYORISTA";
     }
