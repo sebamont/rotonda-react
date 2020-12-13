@@ -1,42 +1,28 @@
-import React, {useState} from 'react';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import {useLocalStorage} from './functions/useLocalStorage'
 import {sucursalData} from './sucursales'
 
-//Guardar state en local storage (para que al refrescar la pagina se guarde la seleccion de provincia/sucursal)
-function useLocalStorage(key, initialValue) {
-  // State to store our value
-  // Pass initial state function to useState so logic is only executed once
-  const [storedValue, setStoredValue] = useState(() => {
-    try {
-      // Get from local storage by key
-      const item = window.localStorage.getItem(key);
-      // Parse stored json or if none return initialValue
-      return item ? JSON.parse(item) : initialValue;
-    } catch (error) {
-      // If error also return initialValue
-      console.log(error);
-      return initialValue;
-    }
-  });
+//Componentes
+import {RedesBar} from './components/redesBar';
+import {HeaderCarousel} from './components/headerCarousel';
+import {Newsletter} from './components/newsletter';
+import {AnimatedWave} from './components/animatedWave';
+import {MarcasCarousel} from './components/marcasCarousel';
 
-  // Return a wrapped version of useState's setter function that ...
-  // ... persists the new value to localStorage.
-  const setValue = value => {
-    try {
-      // Allow value to be a function so we have same API as useState
-      const valueToStore =
-        value instanceof Function ? value(storedValue) : value;
-      // Save state
-      setStoredValue(valueToStore);
-      // Save to local storage
-      window.localStorage.setItem(key, JSON.stringify(valueToStore));
-    } catch (error) {
-      // A more advanced implementation would handle the error case
-      console.log(error);
-    }
-  };
+//Componentes Switch
+import {Sucursales} from './components/sucursales';
+import {Ofertas} from './components/ofertas';
+import {Resumen} from './components/resumen';
+import {SobreNosotros} from './components/sobreNosotros';
+import {Contacto} from './components/contacto';
+import {Curriculum} from './components/curriculum';
 
-  return [storedValue, setValue];
-}
 
 function App() {
   const [provincia, setProvincia] = useLocalStorage("provincia","Salta Capital");
@@ -55,86 +41,129 @@ function App() {
     setSucursal(e.target.title);
   }
 
-  const sucursalesList = Object.keys(sucursalData[provincia]["sucursales"]).map((sucu) => 
-    
-      <a className={sucu===sucursal ? "nav-link active" : "nav-link"} data-toggle="pill" href="/"  role="tab"   key={sucu} title={sucu} onClick={handleSucursal}>{sucu}</a>
-    
-  )
+  
 
   return (
-    <div>
-      <div className="d-none d-md-block row justify-content-center mb-3 pt-3">
-          <h2 className="line-sides">Conocé nuestras &nbsp;<span className="fancy">Sucursales</span></h2>
-        </div>
-        <div className="d-md-none row justify-content-center mb-3 pt-3">
-            <h2 className="line-sides"><span className="fancy">Sucursales</span></h2>
-        </div>
-        <div className="row">
-            <div className="col-12 align-self-center">
-              <h6 className="d-sm-none mb-3 font-italic">Primero elegí tu provincia:</h6>
-              <ul className="nav nav-pills justify-content-around" role="tablist" aria-orientation="horizontal">
-                <li className="nav-item dropdown">
-                  <a className={provincia==="Salta Capital" || provincia==="Salta Interior" ? "nav-link active dropdown-toggle" : "nav-link dropdown-toggle"} data-toggle="dropdown" href="/" >Salta</a>
-                  <div className="dropdown-menu">
-                    <a className={provincia === "Salta Capital" ? "dropdown-item active" : "dropdown-item"} href="/" data-toggle="pill" role="tab"  title="Salta Capital" onClick={handleProvincia}>Capital</a>
-                    <a className={provincia === "Salta Interior" ? "dropdown-item active" : "dropdown-item"} href="/" data-toggle="pill" role="tab"  title="Salta Interior" onClick={handleProvincia}>Interior</a>
-                  </div>  
-                </li>
-                <li className="nav-item">
-                  <a className={provincia === "Jujuy" ? "nav-link active" : "nav-link"} href="/" data-toggle="pill" role="tab"  title="Jujuy" onClick={handleProvincia}>Jujuy</a>
-                </li>
-                <li className="nav-item">
-                  <a className={provincia === "Tucumán" ? "nav-link active" : "nav-link"} href="/" data-toggle="pill" role="tab"  title="Tucumán" onClick={handleProvincia}>Tucumán</a>
-                </li>
-                <li className="nav-item">
-                  <a className={provincia === "Santiago" ? "nav-link active" : "nav-link"} href="/" data-toggle="pill" role="tab"  title="Santiago" onClick={handleProvincia}>Santiago</a>
-                </li>
-                <li className="nav-item">
-                  <a className={provincia === "La Rioja" ? "nav-link active" : "nav-link"} href="/" data-toggle="pill" role="tab"  title="La Rioja" onClick={handleProvincia}>La Rioja</a>
-                </li>
-                <li className="nav-item">
-                  <a className={provincia === "Catamarca" ? "nav-link active" : "nav-link"} href="/" data-toggle="pill" role="tab"  title="Catamarca" onClick={handleProvincia}>Catamarca</a>
-                </li>
-              </ul>
-              <hr />
-            </div>
-        </div>
+    <Router>
+      <div>
+        <RedesBar />
+        <navbar className="navbar navbar-expand-lg fixed-top pt-3">
+      
+          <div className="container d-none d-lg-inline-flex justify-content-around">
+            <ul className="navbar-nav" id="nav-left">
+              <li className="nav-item ml-5"><Link to="/ofertas" className="nav-link text-uppercase font-weight-bold">Ofertas</Link></li>
+              <li className="nav-item ml-5"><Link to="/nosotros" className="nav-link text-uppercase font-weight-bold">Sobre Nosotros</Link></li>
+            </ul>
 
-        <div className="row mt-lg-3">
-          <div className="d-none d-lg-block col-lg-2">
-            <div className="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
-              {sucursalesList}
+            <div className="navbar-logo text-center mx-1">
+              <Link to="/" className="navbar-brand"><img src="img/logo_central_VACA.png" alt="La Rotonda" className="img-fluid" id="mainLogo" /></Link>
             </div>
-          </div>
-          <div className="col-12 d-lg-none">
-            <h6 className="d-sm-none mb-3 font-italic">Ahora selecciona una sucursal:</h6>
-            <div className="nav nav-pills justify-content-center" aria-orientation="horizontal">
-              {sucursalesList}
-            </div>
-            <hr />
-          </div>
-          <div className="col-12 col-lg-10">
-              <iframe src={sucursalData[provincia]["sucursales"][sucursal]["mapSrc"]} width="100%" height="250" frameBorder="0"  allowFullScreen="" aria-hidden="false" tabIndex="0" id="sucursales-map" title="sucursalesMap"></iframe>
-          </div>
-        </div>
 
-        <div className="container mt-3 sucursal-data">
-          <div className="row">
-            <div className="col-4 text-center justify-content-center">
-                <img src="img/svg/map-location.svg" alt="location logo" className="img-fluid" />
-                <address className="mt-2"> {sucursalData[provincia]["sucursales"][sucursal]["direccion"]} </address> 
-            </div>
-            <div className="col-4 text-center justify-content-center">
-              <a href={"tel:"+sucursalData[provincia]["sucursales"][sucursal]["telefono"]}><img src="img/svg/smartphone-1.svg" alt="phone logo" className="img-fluid" /></a>
-              <p className="mt-2">{sucursalData[provincia]["sucursales"][sucursal]["telefono"]}<br /> <small>{sucursalData[provincia]["sucursales"][sucursal]["aclaracionTel"]}</small></p>
-            </div>
-            <div className="col-4 text-center justify-content-center">
-              <img src="img/svg/clock-1.svg" alt="clock logo" className="img-fluid" />
-              <p className="mt-2">{sucursalData[provincia]["sucursales"][sucursal]["horario"]}</p>
+            <ul className="navbar-nav" id="nav-left">
+              <li className="nav-item ml-5"><Link to="/contacto" className="nav-link text-uppercase font-weight-bold">Contacto</Link></li>
+              <li className="nav-item ml-5"><Link to="/curriculum" className="nav-link text-uppercase font-weight-bold">Trabajá con Nosotros</Link></li>
+            </ul>
+          </div>
+
+    
+          <div className="container d-lg-none py-1">
+            <Link to="/" className="navbar-brand text-uppercase font-weight-bold d-lg-none">La Rotonda</Link>
+              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <i className="fa fa-chevron-circle-down" id="navbar-toggler"></i>
+              </button>
+              
+              <div id="navbarSupportedContent" className="collapse navbar-collapse">
+                  <ul className="navbar-nav ml-auto d-lg-none">
+                      <li className="nav-item"><Link to="/ofertas" className="nav-link text-uppercase font-weight-bold">Ofertas</Link></li>
+                      <li className="nav-item"><Link to="/nosotros" className="nav-link text-uppercase font-weight-bold">Sobre Nosotros</Link></li>
+                      <li className="nav-item"><Link to="/curriculum" className="nav-link text-uppercase font-weight-bold">Trabajá con Nosotros</Link></li>
+                      <li className="nav-item"><Link to="/contacto" className="nav-link text-uppercase font-weight-bold">Contacto</Link></li>
+                  </ul>
+              </div>
+          </div>
+        </navbar>
+        <HeaderCarousel />
+        <div className="container-fluid my-4 my-md-5"></div> {/* Separador de secciones */}
+        <Switch>
+          <Route exact path="/">
+            <Sucursales provincia={provincia} setProvincia={setProvincia} sucursal={sucursal} setSucursal={setSucursal} handleProvincia={handleProvincia} handleSucursal={handleSucursal} />
+            <div className="container-fluid my-4 my-md-5"></div> {/* Separador de secciones */}
+            <Resumen />
+            <div className="container-fluid my-4 my-md-5"></div> {/* Separador de secciones */}
+            <Newsletter />
+            <div className="container-fluid my-4 my-md-5"></div> {/* Separador de secciones */}
+          </Route>
+          <Route path="/ofertas">
+            <Ofertas provincia={provincia} setProvincia={setProvincia} sucursal={sucursal} setSucursal={setSucursal} handleProvincia={handleProvincia} handleSucursal={handleSucursal} />
+            <div className="container-fluid my-4 my-md-5"></div> {/* Separador de secciones */}
+            <Newsletter />
+            <div className="container-fluid my-4 my-md-5"></div> {/* Separador de secciones */}
+          </Route>
+          <Route path="/nosotros">
+            <SobreNosotros />
+            <div className="container-fluid my-4 my-md-5"></div> {/* Separador de secciones */}
+          </Route>
+          <Route path="/curriculum">
+            <Curriculum />
+            <div className="container-fluid my-4 my-md-5"></div> {/* Separador de secciones */}
+          </Route>
+          <Route path="/contacto">
+            <Contacto />
+            <div className="container-fluid my-4 my-md-5"></div> {/* Separador de secciones */}
+          </Route>
+          <Route path="*">
+            {/* 404 not found */}
+            <div className="container-fluid my-4 my-md-5"></div> {/* Separador de secciones */}
+          </Route>
+        </Switch>
+
+        <AnimatedWave />
+        <MarcasCarousel />
+
+        <footer className="pt-4 pb-2" id="footer">
+          <div className="container">
+            <div className="row">
+              <div className="col-6 col-md">
+                <h5>Medios de Pago</h5>
+                <img className="mb-2" src="img/medios de pago/mercadopago.png" alt="" width="60" height="38" />
+                <img className="mb-2" src="img/medios de pago/visa.png" alt="" width="60" height="38" />
+                <img className="mb-2" src="img/medios de pago/mastercard.png" alt="" width="60" height="38" /> <br className="d-none d-lg-block" />
+                <img className="mb-2" src="img/medios de pago/naranja.png" alt="" width="60" height="38" />
+                <img className="mb-2" src="img/medios de pago/alimentar.png" alt="" width="60" height="38" />
+                <img className="mb-2" src="img/medios de pago/cabal.png" alt="" width="60" height="38" />
+              </div>
+              <div className="col-6 col-md">
+                <h5>Medios de Contacto</h5>
+                <ul className="list-unstyled text-small mb-3">
+                  <li><Link to="/contacto">Mandanos un Mail</Link></li>
+                  <li><Link to="/curriculum">Dejanos tu Curriculum</Link></li>
+                </ul>
+                <h5 className="mt-3">Redes Sociales</h5>
+                <a href="/" className="facebook"><i className="fab fa-facebook-f"></i></a> &nbsp; &nbsp; &nbsp; 
+                <a href="/" className="instagram"><i className="fab fa-instagram"></i></a>
+              </div>
+              <div className="d-none d-md-block col-6 col-md">
+                <h5>Navegación</h5>
+                <ul className="list-unstyled text-small">
+                  <li><Link to="/">Sucursales</Link></li>
+                  <li><Link to="/ofertas">Ofertas</Link></li>
+                  <li><Link to="/nosotros">Sobre Nosotros</Link></li>
+                </ul>
+              </div>
+              <div className="col-12 mt-md-0 col-md">
+                <hr className="d-md-none" />
+                <p className="text-small"><span className="fancy-light">La Rotonda Mayorista.</span> todos los derechos reservados. &copy; 2020 </p>
+                <small className="d-none d-md-block text-small font-italic mt-5">Desarrollado por <a href="/"><span className="fancy-light">Curly Dev</span></a></small>
+                <div className="text-right d-md-none">
+                  <small className="text-small font-italic">Desarrollado por <a href="/"><span className="fancy-light">Curly Dev</span></a></small>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </footer>
+
       </div>
+    </Router>
   );
 }
 

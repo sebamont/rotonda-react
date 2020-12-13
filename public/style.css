@@ -2,6 +2,11 @@ body {
     background-color: white;
 }
 
+@font-face {
+    font-family: "aller";
+    src: url("Aller/Aller_Bd.ttf");
+  }
+
 /*Botones Redes Sociales*/
 .redes-container {
     background: #0b1327;
@@ -208,7 +213,7 @@ transform-origin: right;
 
 
 
-#sucursales-map {
+.shadowed-whitesmoke-map {
     border:10px solid #be2121; 
     border-radius: 20px;
 
@@ -224,19 +229,19 @@ transform-origin: right;
     }
   }
 
-#sucursales .nav-pills .nav-link {
+.shadowed-whitesmoke .nav-pills .nav-link {
     color: #0b1327;
     
 }
 
-#sucursales .nav-pills .active {
+.shadowed-whitesmoke .nav-pills .active {
     color: #191970;
     background-color: white;
     border: 2px solid #bcbcc9;
     
 }
 
-#sucursales .nav-pills .nav-link:hover, #sucursales .nav-pills .dropdown-toggle:focus, #sucursales .nav-pills .dropdown-item:hover {
+.shadowed-whitesmoke .nav-pills .nav-link:hover, .shadowed-whitesmoke .nav-pills .dropdown-toggle:focus, .shadowed-whitesmoke .nav-pills .dropdown-item:hover {
     background-color: #0b1327;
     border-bottom: 2px solid #0b1327;
     color:whitesmoke;
@@ -244,7 +249,7 @@ transform-origin: right;
 
 
 
-#sucursales .nav-pills .active:hover {
+.shadowed-whitesmoke .nav-pills .active:hover {
     color: #191970;
     background-color: white;
     border: 2px solid #bcbcc9;
@@ -315,3 +320,29 @@ transform-origin: right;
 }
 
 
+.video-react-big-play-button, .video-react-big-play-button-left, .big-play-button-hide{
+    display: none;
+}
+
+.video-react, .video-react[style]{
+    padding-top: 0 !important; 
+}
+
+.video-react-video {
+    max-width: 500px !important;
+    height: auto;
+    border-radius: 10px !important;
+    border: 5px solid whitesmoke;
+    box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.4) ;
+    -webkit-box-shadow : 0px 5px 3px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.4);
+}
+
+.btn-color {
+    background-color: #23407e;
+    border-color: #23407e;
+}
+  
+h1, span {
+    font-family: aller;
+}
