@@ -9,7 +9,7 @@ body {
 
 /*Botones Redes Sociales*/
 .redes-container {
-    background: #0b1327;
+    background: #23407e;
     display: flex;
     height: 30px;
     align-items: center;
@@ -66,14 +66,14 @@ body {
 }
 
 .navbar .nav-link {
-    color: #191970;
+    color: #23407e;
     position: relative;
     display: block;
 }
 
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
-    color: #191970;
+    color: #23407e;
     text-decoration: none;
 }
 
@@ -84,7 +84,7 @@ body {
     height: 3px;
     top: 100%;
     left: 0;
-    background: #191970;
+    background: #23407e;
     transition: transform 0.5s;
     transform: scaleX(0);
     transform-origin: right;
@@ -97,7 +97,7 @@ body {
     height: 3px;
     top: 0%;
     left: 0;
-    background: #191970;
+    background: #23407e;
     transition: transform 0.5s;
     transform: scaleX(0);
     transform-origin: left;
@@ -118,7 +118,7 @@ transform-origin: right;
 }
 
 .navbar .navbar-brand {
-    color: #191970;
+    color: #23407e;
 }
 
 @media (min-width: 341px) and (max-width: 991px) {
@@ -128,7 +128,7 @@ transform-origin: right;
   }
 
 #navbar-toggler {
-    color: #191970;
+    color: #23407e;
 } 
 
 .navbar-logo {
@@ -207,7 +207,7 @@ transform-origin: right;
 }
 
 .fancy {
-    color: #191970;
+    color: #23407e;
     
 }
 
@@ -230,27 +230,27 @@ transform-origin: right;
   }
 
 .shadowed-whitesmoke .nav-pills .nav-link {
-    color: #0b1327;
+    color: #23407e;
     
 }
 
 .shadowed-whitesmoke .nav-pills .active {
-    color: #191970;
+    color: #23407e;
     background-color: white;
     border: 2px solid #bcbcc9;
     
 }
 
 .shadowed-whitesmoke .nav-pills .nav-link:hover, .shadowed-whitesmoke .nav-pills .dropdown-toggle:focus, .shadowed-whitesmoke .nav-pills .dropdown-item:hover {
-    background-color: #0b1327;
-    border-bottom: 2px solid #0b1327;
+    background-color: #23407e;
+    border-bottom: 2px solid #23407e;
     color:whitesmoke;
 }
 
 
 
 .shadowed-whitesmoke .nav-pills .active:hover {
-    color: #191970;
+    color: #23407e;
     background-color: white;
     border: 2px solid #bcbcc9;
    
@@ -276,7 +276,7 @@ transform-origin: right;
 }
 
 #select-provincia {
-    color: #191970;
+    color: #23407e;
     height: 50px;
     background: rgb(235, 235, 235);
     border-color: #b3b8c5;

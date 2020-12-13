@@ -9,7 +9,7 @@ export function Sucursales(props) {
   )
 
   return (
-    <div className="container pb-5 shadowed-whitesmoke" id="sucursales">
+    <main className="container pb-5 shadowed-whitesmoke" id="sucursales">
       <div className="d-none d-md-block row justify-content-center mb-3 pt-3">
           <h2 className="line-sides">Conocé nuestras&nbsp;<span className="fancy">Sucursales</span></h2>
         </div>
@@ -81,6 +81,6 @@ export function Sucursales(props) {
             </div>
           </div>
         </div>
-      </div>
+      </main>
   );
 }
