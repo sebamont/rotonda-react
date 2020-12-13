@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import {useLocalStorage} from './functions/useLocalStorage'
 import {sucursalData} from './sucursales'
+import ScrollToTop from './components/scrollToTop';
 
 //Componentes
 import {RedesBar} from './components/redesBar';
@@ -22,6 +23,7 @@ import {Resumen} from './components/resumen';
 import {SobreNosotros} from './components/sobreNosotros';
 import {Contacto} from './components/contacto';
 import {Curriculum} from './components/curriculum';
+import {NotFound} from './components/notFound';
 
 
 function App() {
@@ -45,9 +47,10 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div>
         <RedesBar />
-        <navbar className="navbar navbar-expand-lg fixed-top pt-3">
+        <nav className="navbar navbar-expand-lg fixed-top pt-3">
       
           <div className="container d-none d-lg-inline-flex justify-content-around">
             <ul className="navbar-nav" id="nav-left">
@@ -81,7 +84,7 @@ function App() {
                   </ul>
               </div>
           </div>
-        </navbar>
+        </nav>
         <HeaderCarousel />
         <div className="container-fluid my-4 my-md-5"></div> {/* Separador de secciones */}
         <Switch>
@@ -112,7 +115,7 @@ function App() {
             <div className="container-fluid my-4 my-md-5"></div> {/* Separador de secciones */}
           </Route>
           <Route path="*">
-            {/* 404 not found */}
+            <NotFound />
             <div className="container-fluid my-4 my-md-5"></div> {/* Separador de secciones */}
           </Route>
         </Switch>
@@ -139,8 +142,8 @@ function App() {
                   <li><Link to="/curriculum">Dejanos tu Curriculum</Link></li>
                 </ul>
                 <h5 className="mt-3">Redes Sociales</h5>
-                <a href="/" className="facebook"><i className="fab fa-facebook-f"></i></a> &nbsp; &nbsp; &nbsp; 
-                <a href="/" className="instagram"><i className="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/rotondamayorista/" target="_blank" className="facebook" rel="noreferrer"><i className="fab fa-facebook-f"></i></a> &nbsp; &nbsp; &nbsp; 
+                <a href="https://www.instagram.com/rotondamayorista" className="instagram" target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i></a>
               </div>
               <div className="d-none d-md-block col-6 col-md">
                 <h5>Navegación</h5>

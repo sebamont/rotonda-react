@@ -213,7 +213,7 @@ transform-origin: right;
 
 
 
-.shadowed-whitesmoke-map {
+#sucursales-map {
     border:10px solid #be2121; 
     border-radius: 20px;
 
@@ -338,11 +338,17 @@ transform-origin: right;
     -moz-box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.4);
 }
 
+@media (max-width: 580px) {
+    .video-react-video {
+    max-width: 280px !important;    
+    }
+}
+
 .btn-color {
     background-color: #23407e;
     border-color: #23407e;
 }
   
-h1, span {
+h1, span, .navbar, #not-found {
     font-family: aller;
 }

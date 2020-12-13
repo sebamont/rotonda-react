@@ -12,25 +12,25 @@ export function Contacto() {
                 
                 <div className="col-xl-6 col-lg-6 col-xs-12">
                     
-                    <form method="POST" action="#" className="needs-validation " novalitade>
+                    <form method="POST" action="#" className="needs-validation " noValidate>
                     
                     <div className="form-group">
-                        <label for="name" className="form-label">Nombre Completo</label>
+                        <label htmlFor="name" className="form-label">Nombre Completo</label>
                         <input id="name" type="text" className="form-control " placeholder="Nombre Completo" required />
                     </div>
                     
                     <div className="form-group">
-                        <label for="email">E-mail</label>
+                        <label htmlFor="email">E-mail</label>
                         <input id="email" type="email" className="form-control" placeholder="tumail@ejemplo.com" required />
                     </div>
 
                     <div className="form-group">
-                        <label for="phone">Teléfono</label>
+                        <label htmlFor="phone">Teléfono</label>
                         <input id="phone" type="phone" className="form-control" placeholder="+543874624471" required />
                     </div>
 
                     <div className="form-group">
-                        <label for="motivo">Seleccione el motivo </label>
+                        <label htmlFor="motivo">Seleccione el motivo </label>
                         <select id="motivo" className="form-control" required>
                             <option value="">Consulta</option>
                             <option value="">Sugerencia</option>
@@ -41,7 +41,7 @@ export function Contacto() {
                     </div>
 
                     <div className="form-group">
-                        <label for="comentario">Escriba su comentario </label>
+                        <label htmlFor="comentario">Escriba su comentario </label>
                         <textarea id="comentario" className="form-control" placeholder="comentario" required></textarea>
                     </div>
                     <div className="d-flex justify-content-center mt-5">
