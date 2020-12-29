@@ -14,7 +14,7 @@ export function HeaderCarousel(){
                 <div className="carousel-item active" style={{backgroundImage: "url('img/nuevaSucursal.jpg')"}}>
                 <div className="carousel-caption">
                     <h1 className="display-4 la-rotonda">La Rotonda</h1>
-                    <p className="lead description-slide">This is a description for the first slide.</p>
+                    <h3 className="lead description-slide">Distribuidor Mayorista.</h3>
                 </div>
                 </div>
                 <div className="carousel-item" style={{backgroundImage: "url('img/ofertasSemanales.jpg')"}}>
