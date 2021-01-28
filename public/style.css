@@ -345,3 +345,14 @@ span,
 #not-found {
 	font-family: aller;
 }
+
+.ofertas-img {
+	border-radius: 20px;
+}
+
+
+
+#carouselOfertas .carousel-control-prev-icon, #carouselOfertas .carousel-control-next-icon{
+	border-radius: 50%;
+	background-color: #0b1327;
+}
