@@ -1,5 +1,4 @@
 import React from "react";
-import { Player, ControlBar } from "video-react";
 
 export function SobreNosotros() {
 	return (
@@ -10,7 +9,7 @@ export function SobreNosotros() {
 				</h2>
 				<div className="row mt-3 align-items-center">
 					<div className="col-xl-12 col-lg-12 col-xs-12 text-center mt-2 d-none d-none d-md-block">
-						<img src="./img/RR1.jpg" className="img-fluid " />
+						<img src="./img/RR1.jpg" className="img-fluid " alt="sobre-Rotonda"/>
 					</div>
 					<div className="col-xl-12 col-lg-12 col-xs-12 mt-3">
 						<p className="text-center ">
