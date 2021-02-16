@@ -1,1 +1,8 @@
-testing changes to master branch.
+# ROTONDA MAYORISTA Corporative Website.
+
+## Techs Used:
+* React
+* React Hooks
+* React Router
+* Bootstrap
+
