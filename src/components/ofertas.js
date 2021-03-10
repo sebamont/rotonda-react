@@ -150,34 +150,36 @@ export function Ofertas(props) {
 				<div className="row mx-auto text-center justify-content-center align-items-center">
 				<div id="carouselOfertas" className="carousel slide" data-ride="carousel">
 					<div className="carousel-inner">
+
 						<div className="carousel-item active">
-							<img className="img-fluid h-100 ofertas-img" src="https://scontent.ftuc1-2.fna.fbcdn.net/v/t1.0-9/142934019_1858434077648042_3599488307965653274_o.jpg?_nc_cat=105&ccb=2&_nc_sid=a26aad&_nc_ohc=yB-FjFQ3P6MAX_K5bOB&_nc_ht=scontent.ftuc1-2.fna&oh=277047ba7dc5880d3fbdf89bc272f00a&oe=60378B64" alt="First slide" />
+							<img className="img-fluid h-100 ofertas-img" src="https://scontent.faep8-2.fna.fbcdn.net/v/t1.0-9/157304576_1889804601177656_2365338785358834700_o.jpg?_nc_cat=100&ccb=1-3&_nc_sid=a26aad&_nc_ohc=37YHETuRCUEAX-hzE3F&_nc_ht=scontent.faep8-2.fna&oh=46f58772d6d29fa9f787c0c767ba7b75&oe=606D42BA" alt="First slide" />
 						</div>
 						<div className="carousel-item">
-							<img className="img-fluid h-100 ofertas-img" src="https://scontent.ftuc1-1.fna.fbcdn.net/v/t1.0-9/143560740_1858434087648041_2602427003375767994_o.jpg?_nc_cat=101&ccb=2&_nc_sid=a26aad&_nc_ohc=_30bojm2-9MAX-y5_aR&_nc_ht=scontent.ftuc1-1.fna&oh=a1e0dd4265fe79aa65541cadc1a8b7b9&oe=603A5BE5" alt="Second slide" />
+							<img className="img-fluid h-100 ofertas-img" src="https://scontent.faep8-1.fna.fbcdn.net/v/t1.0-9/156954688_1889804611177655_6429659535239556266_o.jpg?_nc_cat=106&ccb=1-3&_nc_sid=a26aad&_nc_ohc=lUgkJLEFTk0AX9SeriJ&_nc_ht=scontent.faep8-1.fna&oh=c53217b85c638fad37540d75d4bd78ca&oe=606EF497" alt="Second slide" />
 						</div>
 						<div className="carousel-item">
-							<img className="img-fluid h-100 ofertas-img" src="https://scontent.ftuc1-1.fna.fbcdn.net/v/t1.0-9/142942337_1858434064314710_142063272945599739_o.jpg?_nc_cat=106&ccb=2&_nc_sid=a26aad&_nc_ohc=7r7gWnSfIx4AX9IATgQ&_nc_ht=scontent.ftuc1-1.fna&oh=53dd691255c489c724ea0a467ad686bc&oe=603AB819" alt="Third slide" />
+							<img className="img-fluid h-100 ofertas-img" src="https://scontent.faep8-1.fna.fbcdn.net/v/t1.0-9/156870946_1889804624510987_3035902456258925079_o.jpg?_nc_cat=111&ccb=1-3&_nc_sid=a26aad&_nc_ohc=q2zdy5hDHYwAX9ydq4y&_nc_ht=scontent.faep8-1.fna&oh=fcd23ed824929a2bc1538ece1c7208e9&oe=606F5B36" alt="Third slide" />
 						</div>
 						<div className="carousel-item">
-							<img className="img-fluid h-100 ofertas-img" src="https://scontent.ftuc1-2.fna.fbcdn.net/v/t1.0-9/143213137_1858434067648043_2873326423608378136_o.jpg?_nc_cat=109&ccb=2&_nc_sid=a26aad&_nc_ohc=v0lOgrAfdpsAX9yauDu&_nc_ht=scontent.ftuc1-2.fna&oh=a77c4770eeb4ad33d9550adf9ada09bc&oe=6039ACC0" alt="Fourth slide" />
+							<img className="img-fluid h-100 ofertas-img" src="https://scontent.faep8-1.fna.fbcdn.net/v/t1.0-9/157139787_1889804604510989_4948363468146902987_o.jpg?_nc_cat=101&ccb=1-3&_nc_sid=a26aad&_nc_ohc=N1gz7xqqXA8AX_AJ0VG&_nc_ht=scontent.faep8-1.fna&oh=4b5bf70a5a51cf878d88e0293c0a008d&oe=606BBF0C" alt="Fourth slide" />
 						</div>
 						<div className="carousel-item">
-							<img className="img-fluid h-100 ofertas-img" src="https://scontent.ftuc1-2.fna.fbcdn.net/v/t1.0-9/142830442_1858434070981376_3177365803682408535_o.jpg?_nc_cat=105&ccb=2&_nc_sid=a26aad&_nc_ohc=OWDIwqyK5qoAX_13RvI&_nc_ht=scontent.ftuc1-2.fna&oh=9f3e55b57b16e80e9c9c1d3511363a82&oe=6038EC32" alt="Fifth slide" />
+							<img className="img-fluid h-100 ofertas-img" src="https://scontent.faep8-2.fna.fbcdn.net/v/t1.0-9/157321721_1889804607844322_6138100110244421192_o.jpg?_nc_cat=107&ccb=1-3&_nc_sid=a26aad&_nc_ohc=N1XjND-PBYAAX_QIuCt&_nc_ht=scontent.faep8-2.fna&oh=7ea6286be2d34acf34f7100aab672ee3&oe=606E7D3E" alt="Fifth slide" />
 						</div>
 						<div className="carousel-item">
-							<img className="img-fluid h-100 ofertas-img" src="https://scontent.ftuc1-1.fna.fbcdn.net/v/t1.0-9/143860891_1858434090981374_6658708635727745219_o.jpg?_nc_cat=107&ccb=2&_nc_sid=a26aad&_nc_ohc=x7RBQNhTOjQAX9mejtd&_nc_ht=scontent.ftuc1-1.fna&oh=f454c3d9f72b515be82443815efd8632&oe=603801F4" alt="Sixth slide" />
+							<img className="img-fluid h-100 ofertas-img" src="https://scontent.faep8-2.fna.fbcdn.net/v/t1.0-9/157341348_1889804597844323_1436796911241468697_o.jpg?_nc_cat=108&ccb=1-3&_nc_sid=a26aad&_nc_ohc=wFMtQq9tKGUAX9Is_bH&_nc_ht=scontent.faep8-2.fna&oh=f2ec6cf17f3bac2a4029b6039e73b71f&oe=606CFEA8" alt="Sixth slide" />
 						</div>
 						<div className="carousel-item">
-							<img className="img-fluid h-100 ofertas-img" src="https://scontent.ftuc1-1.fna.fbcdn.net/v/t1.0-9/142966015_1858434084314708_1380925014867751771_o.jpg?_nc_cat=104&ccb=2&_nc_sid=a26aad&_nc_ohc=-tejAzziMBYAX-0oYJq&_nc_oc=AQlYClAudOJkOi0pGTt-gE-WbzeVSL4Jpk3c7ZNJ5LBlBi8lb2GhkOVVPY4zIH86NNM&_nc_ht=scontent.ftuc1-1.fna&oh=e7d02f32331ae1df8da2f472daa4d093&oe=6038EFCF" alt="Seventh slide" />
+							<img className="img-fluid h-100 ofertas-img" src="https://scontent.faep8-1.fna.fbcdn.net/v/t1.0-9/156409091_1889804621177654_7499656488599457639_o.jpg?_nc_cat=111&ccb=1-3&_nc_sid=a26aad&_nc_ohc=rwwXQo20Sr4AX8ruNc0&_nc_oc=AQl6w-6UMt_KdqkkA06IvHzHtvGcXf4-Yh_-FYz0RdpnngYk4bD8V7DArwtxxD0HY4c&_nc_ht=scontent.faep8-1.fna&oh=c4a107e4085da51e859394ef32720334&oe=606F6FC6" alt="Seventh slide" />
 						</div>
 						<div className="carousel-item">
-							<img className="img-fluid h-100 ofertas-img" src="https://scontent.ftuc1-1.fna.fbcdn.net/v/t1.0-9/143328362_1858434074314709_8616608656448724164_o.jpg?_nc_cat=101&ccb=2&_nc_sid=a26aad&_nc_ohc=muiN-iSU3cYAX85jLDU&_nc_ht=scontent.ftuc1-1.fna&oh=74acf518ef9e8508d1489470d3e09191&oe=60393F44" alt="Eigth slide" />
+							<img className="img-fluid h-100 ofertas-img" src="https://scontent.faep8-1.fna.fbcdn.net/v/t1.0-9/157365686_1889804617844321_2048325293760108905_o.jpg?_nc_cat=103&ccb=1-3&_nc_sid=a26aad&_nc_ohc=M-8qDXIo9dsAX-ZfL06&_nc_ht=scontent.faep8-1.fna&oh=72e23aa2902fb7d40088cb4973e3f98c&oe=606D0890" alt="Eigth slide" />
 						</div>
 						<div className="carousel-item">
-							<img className="img-fluid h-100 ofertas-img" src="https://scontent.ftuc1-1.fna.fbcdn.net/v/t1.0-9/143458370_1858434080981375_5952749582776357441_o.jpg?_nc_cat=101&ccb=2&_nc_sid=a26aad&_nc_ohc=GUfyz5flBmoAX_grVha&_nc_ht=scontent.ftuc1-1.fna&oh=5b565d2c173fa66dab736c25117f1bde&oe=603A15EF" alt="Nineth slide" />
+							<img className="img-fluid h-100 ofertas-img" src="https://scontent.faep8-2.fna.fbcdn.net/v/t1.0-9/157307338_1889804614510988_3164316770257678004_o.jpg?_nc_cat=100&ccb=1-3&_nc_sid=a26aad&_nc_ohc=ttGyAJEOMfEAX9OA3bS&_nc_ht=scontent.faep8-2.fna&oh=4d097addf70231b2bb74739e6bdedae5&oe=606C71F1" alt="Nineth slide" />
 						</div>
 					</div>
+					
 					<a className="carousel-control-prev " href="#carouselOfertas" role="button" data-slide="prev">
 						<span className="carousel-control-prev-icon" aria-hidden="true"></span>
 						<span className="sr-only">Previous</span>

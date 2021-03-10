@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 export function Resumen() {
 	return (
 		<div className="container justify-content-center">
-			<h2 className="line-sides">
+			<h2 className="line-sides d-none d-md-block">
 				Un poco&nbsp;<span className="fancy">sobre Nosotros</span>
+			</h2>
+			<h2 className="line-sides d-md-none">
+				<span className="fancy">Un poco sobre Nosotros</span>
 			</h2>
 			<div className="row mt-3 mt-md-5 align-items-center">
 				<div className=" col-12 col-lg-6  ">
